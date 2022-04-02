@@ -22,7 +22,7 @@ ENV LUAJIT_INC /usr/local/include/luajit-2.0
 
 
 # 修改清华源
-ADD sources.list /etc/apt/sources.list
+# ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get install supervisor -y
