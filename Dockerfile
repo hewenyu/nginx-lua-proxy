@@ -25,7 +25,7 @@ ENV LUAJIT_INC /usr/local/include/luajit-2.0
 ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update
-# RUN apt-get install -y supervisor
+RUN apt-get install -y supervisor
 
 # 安装 轻量级 DNS 解析, 基于/etc/hosts实现正确的nginx名称解析
 RUN apt-get install -y  dnsmasq
