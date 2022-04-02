@@ -1,9 +1,5 @@
 # 安装参考基于 at http://wiki.nginx.org/HttpLuaModule#Installation
-FROM ubuntu
-
-# https://luajit.org/download/LuaJIT-2.0.5.tar.gz
-# https://codeload.github.com/vision5/ngx_devel_kit/tar.gz/refs/tags/v
-# 0.3.1
+FROM debian
 
 ENV VER_NGINX_DEVEL_KIT=0.3.1
 ENV VER_LUA_NGINX_MODULE=0.10.20
