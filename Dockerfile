@@ -11,7 +11,6 @@ ENV LUA_NGINX_MODULE lua-nginx-module-${VER_LUA_NGINX_MODULE}
 ENV NGINX_ROOT=/nginx
 ENV WEB_DIR ${NGINX_ROOT}/html
 
-
 # openresty modules
 ENV VER_LUA_RESTY_REDIS=0.29
 ENV LUA_RESTY_REDIS lua-resty-redis-${VER_LUA_RESTY_REDIS}
@@ -21,11 +20,15 @@ ENV LUA_RESTY_REDIS lua-resty-redis-${VER_LUA_RESTY_REDIS}
 ENV LUAJIT_LIB /usr/local/lib
 ENV LUAJIT_INC /usr/local/include/luajit-2.0
 
-RUN apt-get -qq update
-RUN apt-get -qq -y install wget supervisor
+
+# 修改清华源
+ADD sources.list /etc/apt/sources.list
+
+RUN apt-get update
+# RUN apt-get install -y supervisor
 
 # 安装 轻量级 DNS 解析, 基于/etc/hosts实现正确的nginx名称解析
-RUN apt-get -qq -y install dnsmasq
+RUN apt-get install -y  dnsmasq
 # docker中的dnsmasq，它必须以用户root身份运行:
 RUN sed -i 's/#user=/user=root/g' /etc/dnsmasq.conf
 
