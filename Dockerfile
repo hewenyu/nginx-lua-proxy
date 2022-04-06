@@ -46,13 +46,13 @@ RUN apt-get -qq -y install libpcre3 libpcre3-dev zlib1g-dev libssl-dev
 # Download modules
 RUN curl http://nginx.org/download/nginx-${VER_NGINX}.tar.gz -o nginx-${VER_NGINX}.tar.gz
 RUN curl http://luajit.org/download/LuaJIT-${VER_LUAJIT}.tar.gz -o LuaJIT-${VER_LUAJIT}.tar.gz
-RUN curl https://github.com/vision5/ngx_devel_kit/archive/refs/tags/v${VER_NGINX_DEVEL_KIT}.tar.gz -O ${NGINX_DEVEL_KIT}.tar.gz
-RUN curl https://github.com/openresty/lua-nginx-module/archive/refs/tags/v${VER_LUA_NGINX_MODULE}.tar.gz -O ${LUA_NGINX_MODULE}.tar.gz
+RUN curl https://github.com/vision5/ngx_devel_kit/archive/refs/tags/v${VER_NGINX_DEVEL_KIT}.tar.gz -o ${NGINX_DEVEL_KIT}.tar.gz
+RUN curl https://github.com/openresty/lua-nginx-module/archive/refs/tags/v${VER_LUA_NGINX_MODULE}.tar.gz -o ${LUA_NGINX_MODULE}.tar.gz
 
 
 #Download openresty libs
 
-RUN wget https://github.com/openresty/lua-resty-redis/archive/refs/tags/v${VER_LUA_RESTY_REDIS}.tar.gz -O ${LUA_RESTY_REDIS}.tar.gz
+RUN wget https://github.com/openresty/lua-resty-redis/archive/refs/tags/v${VER_LUA_RESTY_REDIS}.tar.gz -o ${LUA_RESTY_REDIS}.tar.gz
 
 # Untar
 RUN tar -xzvf nginx-${VER_NGINX}.tar.gz && rm nginx-${VER_NGINX}.tar.gz
