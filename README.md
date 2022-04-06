@@ -13,5 +13,7 @@ docker build --rm -f "Dockerfile" -t nginxluaproxy:latest "."
 docker run --rm -it  openresty/openresty:latest bash
 docker run --rm -it  debian:stable bash
 
+docker run --rm -it  openresty/openresty:1.19.9.1-10-buster
+
 docker build --pull --rm -f "Dockerfile" -t nginxluaproxy:latest
 ```
