@@ -48,7 +48,7 @@ RUN curl http://nginx.org/download/nginx-${VER_NGINX}.tar.gz -o nginx-${VER_NGIN
 RUN curl http://luajit.org/download/LuaJIT-${VER_LUAJIT}.tar.gz -o LuaJIT-${VER_LUAJIT}.tar.gz
 # https://codeload.github.com/vision5/ngx_devel_kit/tar.gz/refs/tags/v0.3.1
 RUN curl https://codeload.github.com/vision5/ngx_devel_kit/tar.gz/refs/tags/v${VER_NGINX_DEVEL_KIT} -o ${NGINX_DEVEL_KIT}.tar.gz
-RUN curl https://github.com/openresty/lua-nginx-module/archive/refs/tags/v${VER_LUA_NGINX_MODULE}.tar.gz -o ${LUA_NGINX_MODULE}.tar.gz
+RUN curl https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/v${VER_LUA_NGINX_MODULE} -o ${LUA_NGINX_MODULE}.tar.gz
 
 
 #Download openresty libs
