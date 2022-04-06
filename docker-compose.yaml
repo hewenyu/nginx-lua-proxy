@@ -1,0 +1,15 @@
+version: '3'
+services:
+  proxy:
+    image: hewenyulucky/nginx-lua-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - nsqlookupd
+    restart: always
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: always

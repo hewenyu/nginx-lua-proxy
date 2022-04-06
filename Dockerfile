@@ -14,8 +14,8 @@ EXPOSE 443
 
 
 # 复制配置文件
-COPY nginx.conf /nginx/conf/nginx.conf
-COPY nginx-lua.conf /nginx/conf/nginx-lua.conf
+COPY nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+COPY nginx-lua.conf /usr/local/openresty/nginx/conf/nginx-lua.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 
