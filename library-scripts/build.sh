@@ -17,10 +17,6 @@ esac
 
 echo $architecture
 
-# download openresty-1.21.4.1rc2.tar.gz
-curl openresty-1.21.4.1rc2.tar.gz  -o openresty.tar.gz
-
-
 # Run install apt-utils to avoid debconf warning then verify presence of other common developer tools and dependencies
 if [ "${PACKAGES_INSTALLED}" != "true" ]; then
 
@@ -51,6 +47,9 @@ apt_get_update_if_needed()
     fi
 }
 
+
+# download openresty-1.21.4.1rc2.tar.gz
+curl https://openresty.org/download/openresty-1.21.4.1rc2.tar.gz -o openresty.tar.gz
 
 
 echo "Done!"

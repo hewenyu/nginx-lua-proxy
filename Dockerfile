@@ -8,6 +8,8 @@ COPY library-scripts/*.sh /tmp/library-scripts/
 # 执行build 脚本
 RUN bash /tmp/library-scripts/build.sh
 
+
+
 # RUN apt-get update
 # RUN apt-get install supervisor curl wget -y
 # RUN apt-get -y install --no-install-recommends wget gnupg ca-certificates

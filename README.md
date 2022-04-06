@@ -10,5 +10,8 @@ docker build --rm -f "Dockerfile" -t nginxluaproxy:latest "."
 
 
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-docker run --rm -it  openresty/openresty:latest
+docker run --rm -it  openresty/openresty:latest bash
+docker run --rm -it  debian:stable bash
+
+docker build --pull --rm -f "Dockerfile" -t nginxluaproxy:latest
 ```
