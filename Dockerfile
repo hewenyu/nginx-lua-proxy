@@ -51,9 +51,9 @@ RUN curl https://codeload.github.com/vision5/ngx_devel_kit/tar.gz/refs/tags/v${V
 RUN curl https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/v${VER_LUA_NGINX_MODULE} -o ${LUA_NGINX_MODULE}.tar.gz
 
 
-#Download openresty libs
-# https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/
-RUN curl https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/v${VER_LUA_RESTY_REDIS} -o ${LUA_RESTY_REDIS}.tar.gz
+# Download openresty libs
+# https://codeload.github.com/openresty/lua-resty-redis/tar.gz/refs/tags/v0.30rc1
+RUN curl https://codeload.github.com/openresty/lua-resty-redis/tar.gz/refs/tags/v${VER_LUA_RESTY_REDIS} -o ${LUA_RESTY_REDIS}.tar.gz
 
 # Untar
 RUN tar -zxvf nginx-${VER_NGINX}.tar.gz && rm nginx-${VER_NGINX}.tar.gz
