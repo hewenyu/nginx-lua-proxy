@@ -52,8 +52,8 @@ RUN curl https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags
 
 
 #Download openresty libs
-
-RUN curl https://github.com/openresty/lua-resty-redis/archive/refs/tags/v${VER_LUA_RESTY_REDIS}.tar.gz -o ${LUA_RESTY_REDIS}.tar.gz
+# https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/
+RUN curl https://codeload.github.com/openresty/lua-nginx-module/tar.gz/refs/tags/v${VER_LUA_RESTY_REDIS}.tar.gz -o ${LUA_RESTY_REDIS}.tar.gz
 
 # Untar
 RUN tar -zxvf nginx-${VER_NGINX}.tar.gz && rm nginx-${VER_NGINX}.tar.gz
