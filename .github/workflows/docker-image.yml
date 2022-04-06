@@ -39,7 +39,8 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64
+          # linux/amd64,linux/arm64
+          platforms: linux/amd64
           build-args: |
               GO_VERSION=1.16-buster
           push: true
